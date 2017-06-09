@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="../Styles/AngularContactsStyle.css" rel="stylesheet" />
+    <script src="../Scripts/angular.js"></script>
+    <script src="../Scripts/AngularContactScriptMain.js"></script>
+    <script src="../Scripts/angularContactDirectives.js"></script>
+</head>
+<body ng-app="angularcontactmainapp">
+    <a ng-click="ShowListView()"><img src="../Images/List.png" />List View</a>
+    <a ng-click="ShowCardView()"><img src="../Images/Card.png" />Card View</a>
+    <div ng-hide="showList"  card-view></div>
+    <div ng-hide="showCard"  list-view></div>  
+</body>
+</html>

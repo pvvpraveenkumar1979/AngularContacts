@@ -1,0 +1,6 @@
+D:\Learning\MyAngularContacts\MyAngularContactsBDLayers\bin\Debug\MyAngularContactsBDLayers.dll
+D:\Learning\MyAngularContacts\MyAngularContactsBDLayers\bin\Debug\MyAngularContactsBDLayers.pdb
+D:\Learning\MyAngularContacts\MyAngularContactsBDLayers\bin\Debug\Newtonsoft.Json.dll
+D:\Learning\MyAngularContacts\MyAngularContactsBDLayers\obj\Debug\MyAngularContactsBDLayers.csprojResolveAssemblyReference.cache
+D:\Learning\MyAngularContacts\MyAngularContactsBDLayers\obj\Debug\MyAngularContactsBDLayers.dll
+D:\Learning\MyAngularContacts\MyAngularContactsBDLayers\obj\Debug\MyAngularContactsBDLayers.pdb
