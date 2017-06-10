@@ -1,0 +1,8 @@
+D:\2017\AngularContacts\AngularContacts\AngularContactsBDTestProject\obj\Debug\AngularContactsBDTestProject.csprojResolveAssemblyReference.cache
+D:\2017\AngularContacts\AngularContacts\AngularContactsBDTestProject\bin\Debug\AngularContactsBDTestProject.dll
+D:\2017\AngularContacts\AngularContacts\AngularContactsBDTestProject\bin\Debug\AngularContactsBDTestProject.pdb
+D:\2017\AngularContacts\AngularContacts\AngularContactsBDTestProject\bin\Debug\MyAngularContactsBDLayers.dll
+D:\2017\AngularContacts\AngularContacts\AngularContactsBDTestProject\bin\Debug\Newtonsoft.Json.dll
+D:\2017\AngularContacts\AngularContacts\AngularContactsBDTestProject\bin\Debug\MyAngularContactsBDLayers.pdb
+D:\2017\AngularContacts\AngularContacts\AngularContactsBDTestProject\obj\Debug\AngularContactsBDTestProject.dll
+D:\2017\AngularContacts\AngularContacts\AngularContactsBDTestProject\obj\Debug\AngularContactsBDTestProject.pdb

@@ -19,9 +19,10 @@ namespace MyAngularContactsBDLayers
                 DTOContacts availableContacts = GetContacts();
                 availableContacts.Contacts.Add(Contact);
                 availableContacts.ContactsCount = availableContacts.Contacts.Count;
+                SaveContacts(availableContacts.Contacts);
                 return true;
             }
-            catch
+            catch(Exception ex)
             {
                 // Throw exception 
 
@@ -43,7 +44,8 @@ namespace MyAngularContactsBDLayers
                 ContactToUpdate.RoadNo = Contact.RoadNo;
                 ContactToUpdate.State = Contact.State;
                 ContactToUpdate.Street = Contact.Street;
-
+                ContactToUpdate.ModifiedOn = DateTime.Now;
+                SaveContacts(availableContacts.Contacts);
                 return true;
             }
             catch
@@ -59,9 +61,18 @@ namespace MyAngularContactsBDLayers
             {
                 DTOContacts availableContacts = GetContacts();
                 DTOContact ContactToDelete = availableContacts.Contacts.FirstOrDefault<DTOContact>(ct => ct.ContactId == Contact.ContactId);
-                availableContacts.Contacts.Remove(ContactToDelete);
-                availableContacts.ContactsCount = availableContacts.Contacts.Count;
-                return true;
+                if (ContactToDelete == null)
+                {
+
+                    return false;
+                }
+                else
+                {
+                    availableContacts.Contacts.Remove(ContactToDelete);
+                    availableContacts.ContactsCount = availableContacts.Contacts.Count;
+                    SaveContacts(availableContacts.Contacts);
+                    return true;
+                }
             }
             catch
             {
@@ -89,7 +100,7 @@ namespace MyAngularContactsBDLayers
         }
         private static DTOContacts GetContacts()
         {
-            FileStream fs = new FileStream(@"C:\Contacts.pk", FileMode.Open);
+            FileStream fs = new FileStream(@"C:\Contacts.pk", FileMode.OpenOrCreate);
             StreamReader sr = new StreamReader(fs);
             string jsonContacts = sr.ReadToEnd();
             List<DTOContact> contactList = JsonConvert.DeserializeObject<List<DTOContact>>(jsonContacts);
@@ -97,9 +108,16 @@ namespace MyAngularContactsBDLayers
             fs.Close();
 
             DTOContacts contacts = new DTOContacts();
-            contacts.Contacts = contactList;
-            contacts.ContactsCount = contactList.Count;
-
+            if (contactList == null)
+            {
+                contacts.Contacts = new List<DTOContact>();
+                contacts.ContactsCount = 0;
+            }
+            else
+            {
+                contacts.Contacts = contactList;
+                contacts.ContactsCount = contactList.Count;
+            }
             return contacts;
         }
         #endregion
